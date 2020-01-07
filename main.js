@@ -7,6 +7,7 @@ function rgbToHex() {
   let redValue = Number(redChange.value).toString(16)
   let greenValue = Number(greenChange.value).toString(16)
   let blueValue = Number(blueChange.value).toString(16)
+  // 填充字串長度為2，總長為6  
   return hexColorCode.innerHTML = `#${redValue.padStart(2, '0')}${greenValue.padStart(2, '0')}${blueValue.padStart(2, '0')}`
 }
 // 整體背景依混色結果變色
@@ -37,9 +38,6 @@ function blue(event) {
   rgbToHex()
   bgColor()
 }
-
-// background color change
-// bgColor()
 
 // listen to color bar
 redChange.addEventListener('mousemove', red)
